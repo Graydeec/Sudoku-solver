@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Header";
+import Solver from "./Solver";
+import Game from "./Game";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [mode, setMode] = useState("GAME");
+
+  const handleClick = (e) => {
+    setMode(e.target.value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        <Header name={"SODUKU"} />
+        <div className="buttonBar">
+          <button
+            className="button"
+            value="GAME"
+            onClick={(e) => handleClick(e)}
+          >
+            Game
+          </button>
+          <button
+            className="button"
+            value="SOLVER"
+            onClick={(e) => handleClick(e)}
+          >
+            Solver
+          </button>
+        </div>
+        {mode === "GAME" ? <Game /> : <Solver />}
+      </div>
     </div>
   );
 }

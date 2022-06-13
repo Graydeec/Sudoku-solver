@@ -2,19 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +10,89 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.node {
+  background-color: rgb(194, 194, 194);
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 1px solid grey;
+  width: calc(48px * var(--ratio));
+  height: calc(48px * var(--ratio));
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.node-invalid{
+  background-color: rgb(240, 41, 41);
+}
+
+:root {
+  --ratio: 0.75;
+}
+
+@media (max-width: 992px) {
+  :root {
+    --ratio: 0.50;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.solver{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  gap: 20px;
+}
+
+table{
+  border-collapse: collapse;
+  border: 3px solid rgb(32, 46, 71);
+  background-color: rgb(32, 46, 71);
+}
+
+.rborder{
+  border-bottom: 2px solid black;
+}
+
+.cborder{
+  border-right: 2px solid black;
+}
+
+.buttonBar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button{
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.button-solve{
+  background-color:rgb(216, 59, 59);
+}
+
+.button-reset{
+  background-color:rgb(236, 229, 122);
+}
+
+.button-hint{
+  background-color: burlywood;
+}
+
+.button-next{
+  background-color:darkslategray;
+}
+
+.message-panel{
+  background-color: darkkhaki;
 }
