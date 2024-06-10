@@ -1,6 +1,6 @@
 # Sudoku Solver
 
-[Sudoku Solver](https://sudoku-soolver.herokuapp.com/) is an online website that contians 2 parts, one is the classic sudoku game and the other part is a tool that helps player to solve custom sudoku games.
+[Sudoku Solver](https://staging.d2a5r511lk0pch.amplifyapp.com/) is an online website that contians 2 parts, one is the classic sudoku game and the other part is a tool that helps player to solve custom sudoku games.
 
 ## Preview
 
